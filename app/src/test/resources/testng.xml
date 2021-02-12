@@ -1,0 +1,72 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="First">
+
+    <parameter name="secondParameter" value="My first param in XML" />
+    <test name="Simple Test">
+        <classes>
+            <class name="com.homework.AppTest">
+            </class>
+
+        </classes>
+    </test>
+    <test name="Several Test Group">
+<!--        <groups>-->
+<!--            <define name="exclude-group">-->
+<!--                <include name="SecondTest"/>-->
+<!--                <include name="FourthTest"/>-->
+<!--            </define>-->
+<!--            <define name="include-group">-->
+<!--                <include name="FirstTest"/>-->
+<!--                <include name="ThirdTest"/>-->
+<!--                <include name="FifthTest"/>-->
+<!--                <include name="SixthTest"/>-->
+<!--            </define>-->
+<!--            <run>-->
+<!--                <include name="include-group"></include>-->
+<!--                <exclude name="exclude-group"></exclude>-->
+<!--            </run>-->
+<!--        </groups>-->
+        <classes>
+            <class name="com.homework.SeveralTestGroup">
+                <methods>
+                    <exclude name="SecondTest"/>
+                    <exclude name="FourthTest"/>
+                </methods>
+            </class>
+
+        </classes>
+    </test>
+    <parameter name="firstParameter" value="My first param in XML" />
+    <test name="Parameterized Test one">
+
+        <classes>
+            <class name="com.homework.ParameterizedTests">
+                <methods>
+                    <exclude name="SecondXMLParam"></exclude>
+                </methods>
+            </class>
+
+        </classes>
+    </test>
+    <parameter name="secondParameter" value="25" />
+    <test name="Parameterized Test two">
+
+        <classes>
+            <class name="com.homework.ParameterizedTests">
+                <methods>
+                    <include name="SecondXMLParam"/>
+                </methods>
+            </class>
+
+        </classes>
+    </test>
+    <test name="Priority Tests">
+
+        <classes>
+            <class name="com.homework.PriorityTests">
+            </class>
+
+        </classes>
+    </test>
+</suite>
+
