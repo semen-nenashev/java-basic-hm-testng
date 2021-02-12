@@ -5,23 +5,24 @@ package com.homework;
 
 import org.testng.Assert;
 import org.testng.annotations.*;
+
 import static org.testng.Assert.*;
 
 public class AppTest {
     @BeforeTest
-    public void setUp(){
+    public void setUp() {
         System.out.println(getClass().getName());
     }
 
 
     @Test
     public void SimpleTest() {
-        Assert.assertEquals(1,1, "Test failed!");
+        Assert.assertEquals(1, 1, "Test failed!");
         System.out.println("Test passed!");
     }
 
     @AfterTest
-    public void tearDown(){
+    public void tearDown() {
         System.out.println(getClass().getName());
     }
 }

@@ -15,19 +15,19 @@ public class SeveralTestGroup {
     }
     @Test(groups = {"First group"})
     public void FirstTest() {
-        Assert.assertEquals(1,1,"Test 1 failed!");
+        Assert.assertEquals(1, 1, "Test 1 failed!");
         System.out.println("Test 1 group 1!");
     }
 
     @Test(groups = {"Second group"})
-    public void SecondTest(){
-        Assert.assertEquals(2,2,"Test 2 failed!");
+    public void SecondTest() {
+        Assert.assertEquals(2, 2, "Test 2 failed!");
         System.out.println("Test 2 group 2!");
     }
 
     @Test(groups = {"First group"})
-    public void ThirdTest(){
-        Assert.assertEquals(3,3,"Test 3 failed!");
+    public void ThirdTest() {
+        Assert.assertEquals(3, 3, "Test 3 failed!");
         System.out.println("Test 3 group 1!");
     }
 
